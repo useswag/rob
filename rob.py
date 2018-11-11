@@ -33,7 +33,7 @@ def rob_reply(msg):
 
     [['debt'],['Oh. That\'s pretty annoying!']],
 
-    [['i need help'], ['okay']],
+    [['i need help'], ['okay :)', 'Tough shit', 'Find someone who cares','Good luck finding some']],
     [['i want'], ['Well, we don\'t always get what we want']]
 
     ]
@@ -44,6 +44,9 @@ def rob_reply(msg):
         'I\'m not allowed to',
         'I got fired last time',
         'the last time I did, it didn\'t end well'
+        'I can\'t',
+        'Rob isn\'t here at the moment, please leave a message.',
+        'I don\'t want to, I don\'t like you, and you deserve every struggle you face',
     ]
 
 
@@ -57,7 +60,7 @@ def rob_reply(msg):
 
     if re.search('i need help with (.*)', msg.lower()):
         topic = re.search('i need help with (.*)', msg.lower()).group(1)
-        return (f'I could try and help with {topic}, but the last time I did, someone died!')
+        return (f'I could try and help with {topic}, but {random.choice(unhelpful)}')
 
 
     if re.search('(i|i\'d) (want|would like|like|need) to know about (.*)', msg.lower()):
