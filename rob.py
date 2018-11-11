@@ -51,7 +51,7 @@ def rob_reply(msg):
 
 
     if re.search('should i (spend my money on|buy)', msg.lower()):
-        return (random.choice(['Heck yes','Obviously you should','YES! (But you didn\'t hear it from me.', 'Yes you should. Infact, buy two!']))
+        return (random.choice(['Heck yes','Obviously you should','YES! (But you didn\'t hear it from me.)', 'Yes you should. Infact, buy two!']))
 
     if re.search('i (need|would like|require|want)( | some )(help|assistance) with my (.*)', msg.lower()):
         topic = re.search('i (need|would like|require|want)( | some )(help|assistance) with my (.*)', msg.lower()).group(4)
@@ -81,6 +81,7 @@ def rob_reply(msg):
         'Awesome',
         'Oh.',
         'Sorry, I\'m a bit busy right now sorting someone elses mess',
+        'That is really interesting',
     ]
 
 
